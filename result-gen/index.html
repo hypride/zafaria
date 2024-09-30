@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Fest Results</title>
+    <style>
+        .form-container { margin: 20px; }
+        .result-container { margin-top: 20px; }
+        .input-group { margin-bottom: 10px; }
+        .result-item { border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Enter Program Details</h2>
+    <div class="input-group">
+        <label for="program-id">Program ID:</label>
+        <input type="text" id="program-id">
+    </div>
+    <div class="input-group">
+        <label for="program-name">Program Name:</label>
+        <input type="text" id="program-name">
+    </div>
+
+    <div id="results-container">
+        <h3>Results</h3>
+
+        <div class="result-item">
+            <div class="input-group">
+                <label for="student-name">Student Name:</label>
+                <input type="text" class="student-name">
+            </div>
+            <div class="input-group">
+                <label for="team-name">Team Name:</label>
+                <select class="team-name">
+                    <option value="Team A">Team A</option>
+                    <option value="Team B">Team B</option>
+                    <option value="Team C">Team C</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="position">Position:</label>
+                <select class="position">
+                    <option value="1st With A Grade" data-img-url="https://1st.com">1st With A Grade</option>
+                    <option value="2nd With A Grade" data-img-url="https://2nd.com">2nd With A Grade</option>
+                    <option value="3rd With A Grade" data-img-url="https://3rd.com">3rd With A Grade</option>
+                    <option value="1st With B Grade" data-img-url="https://1st.com">1st With B Grade</option>
+                    <option value="2nd With B Grade" data-img-url="https://2nd.com">2nd With B Grade</option>
+                    <option value="3rd With B Grade" data-img-url="https://3rd.com">3rd With B Grade</option>
+                    <option value="A Grade" data-img-url="https://grade.com">A Grade</option>
+                    <option value="B Grade" data-img-url="https://grade.com">B Grade</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Add another position button -->
+        <button type="button" id="add-position">Add Another Position</button>
+    </div>
+
+    <button type="button" id="add-result">Add Result</button>
+    <button type="button" id="download-html">Download File</button>
+</div>
+
+<div class="result-container" id="generated-results"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

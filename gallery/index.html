@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/x-icon" href="../images/logob.png">
+   <title>Kullun Kala '23 - Gallery</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="style.css">
+<style>
+  /* CSS for the preloader */
+  </style>
+</head>
+<body>
+
+   
+      <div id="side-menu" class=""></div>   
+
+<div class="gallery">
+
+   <h1 class="heading">image gallery</h1>
+
+   <div class="image-container">
+    <img src="image/30.jpg"  alt="">
+    <img src="image/33.jpg"  alt="">
+    <img src="image/31.jpg"  alt="">
+    <img src="image/32.jpg"  alt="">
+    <img src="image/40.jpg"  alt="">
+    <img src="image/46.jpg"  alt="">
+    <img src="image/45.jpg"  alt="">
+    <img src="image/44.jpg"  alt="">
+    <img src="image/43.jpg"  alt="">
+    <img src="image/42.jpg"  alt="">
+    <img src="image/41.jpg"  alt="">
+    <img src="image/34.jpg"  alt="">
+    <img src="image/35.jpg"  alt="">
+    <img src="image/36.jpg"  alt="">
+    <img src="image/37.jpeg"  alt="">
+    <img src="image/38.jpg"  alt="">
+    <img src="image/39.jpg"  alt="">
+    <img src="image/40.jpg"  alt="">
+    <img src="image/24.jpeg"  alt="">
+    <img src="image/25.jpeg"  alt="">
+    <img src="image/26.jpeg"  alt="">
+    <img src="image/27.jpeg"  alt="">
+    <img src="image/28.jpeg"  alt="">
+    <img src="image/29.jpeg"  alt="">
+    <img src="image/30.jpeg"  alt="">
+    <img src="image/31.jpeg"  alt="">
+    <img src="image/32.jpeg"  alt="">
+    
+    
+    
+
+    <a href="https://t.me/+HZueXodWDO5kMDE1"><img src="image/load.jpg"  alt=""></a>
+
+
+      
+      
+   </div>
+
+</div>
+
+<div class="image-popup">
+   <img src="" alt="">
+</div>
+
+
+<script src="script.js"></script>
+<script>
+  // Get all the image elements
+const images = document.querySelectorAll('.image-container img');
+
+// Counter to keep track of loaded images
+let loadedImages = 0;
+
+// Function to show the gallery and hide the preloader
+function showGallery() {
+  const preloader = document.querySelector('.preloader');
+  const gallery = document.querySelector('.gallery');
+  
+  preloader.style.display = 'none';
+  gallery.style.display = 'block';
+}
+
+// Function to check if all images are loaded
+function imageLoaded() {
+  loadedImages++;
+  if (loadedImages === images.length) {
+    showGallery();
+  }
+}
+
+// Add 'load' event listeners to all images
+images.forEach((image) => {
+  image.addEventListener('load', imageLoaded);
+});
+
+// In case an image fails to load, also hide the preloader and show the gallery
+images.forEach((image) => {
+  image.addEventListener('error', imageLoaded);
+});
+
+
+</script>
+<script>
+  function myFunc() {
+  document.getElementsByClassName("preloader").style.display = "none";
+  document.getElementsByClassName("gallery").innerHTML = "block";
+}
+</script>
+
+</body>
+</html>

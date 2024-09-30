@@ -1,0 +1,665 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Kullun Kala '23 - Results</title>
+  <link rel="icon" href="https://hypride.github.io/kullun-kala/images/logob.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+
+    #myUL {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #myUL li a {
+      border: 1px solid #ddd;
+      margin-top: -1px;
+      /* Prevent double borders */
+      margin-bottom: 4px;
+      background-color: #e0e0e0;
+      padding: 3px;
+      padding-left: 10px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 14px;
+      color: black;
+      display: block
+    }
+
+    #myUL li a:hover:not(.header) {
+      background-color: #eee;
+    }
+
+    #myInput {
+
+      width: 100%;
+      font-size: 14px;
+      border-radius: 20px;
+      background-color: #e0e0e0;
+      padding: 3px 3px 3px 3px;
+      border: 1px solid #e0e0e0;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: scroll;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      overflow: auto;
+      border-radius: 20px;
+      width: 80%;
+      position: relative;
+      transition: all 5s ease-in-out;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .popup .close:hover {
+      color: #06D85F;
+    }
+
+    .popup .content {
+      max-height: 30%;
+      overflow: auto;
+    }
+
+    @media screen and (max-width: 700px) {
+      .box {
+        width: 90%;
+      }
+
+      .popup {
+        width: 90%;
+      }
+    }
+
+
+    .row {
+      margin-top: 5%;
+      display: flex;
+      overflow: hidden;
+      justify-content: space-between;
+    }
+
+    .course-col {
+      flex-basis: 32%;
+      background: #fff3f3;
+      border-radius: 10px;
+      margin-bottom: 5%;
+      padding: 20px 12px;
+      box-sizing: border-box;
+      transition: 1s;
+    }
+
+    h3 {
+      text-align: center;
+      font-weight: 600;
+      margin: 10px 0px;
+    }
+
+    .course-col:hover {
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    @media(max-width: 700px) {
+      .row {
+        flex-direction: column;
+      }
+
+      .forshadow2 {
+        padding: 8%;
+      }
+    }
+
+    .col-sm {
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+
+    #content .navbara ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+
+    }
+
+
+    #content .navbara li {
+      float: right;
+      margin-right: 30px;
+      color: black;
+      text-decoration: none;
+    }
+
+    .forshadow2 {
+      padding: 5%;
+      padding-top: 8%;
+      border-radius: 30px;
+      box-shadow: 0 0 30px 5px #e4e4e4;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container d-md-flex align-items-stretch">
+    <!-- Page Content  -->
+
+    <div>
+      <div class="mhead">
+        <p style="text-align: center; margin-bottom: -30px;">Kullun Kala '23</p>
+        <h1 style="font-size: 80px; font-family: myFirstFont; text-align: center; ">Results</h1>
+      </div>
+      <nav id="sidebar">
+        <div class="p-4 pt-5 forshadow">
+          <h6 style="color: black;"><strong><i>LIVE RESULTS</i></strong></h6>
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type in a name">
+          <ul class="list-unstyled components mb-5" id="myUL">
+            <li>
+              <a href="#essayarabictanawiyya">Essay ARB - Thanawiyya</a>
+            </li>
+            <li><a href="#peommlmuoola">Poem MLM - Uoola</a></li>
+
+<li><a href="#kaviyaranguoola">Kaviyarangu - Uoola</a></li>
+
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+
+
+    <div id="content" class="p-4 p-md-5 pt-5">
+      <section class="feci" id="fec">
+        <div class="navbara">
+          <ul>
+
+            <li><a href="#" id="loadReuslt">Results</a></li>
+            <li><a href="#" id="loadGallery">Gallery</a></li>
+            <li><a href="#" id="loadAbout">About</a></li>
+            <li><a href="#" id="loadHome">Home</a></li>
+
+          </ul>
+        </div>
+        <p style="text-align: left; font-size: 20px; color: black; margin: 0px;"><strong>TOPPERS</strong></p>
+
+        <div class="row1">
+          <div class="feci-col1 flick_lum">
+
+            <div class="sufaid1" style="background-color: #36bc97; box-shadow: 0 0 30px 5px #e4e4e4;padding: 9%;">
+              <h1 class="" style="text-align: left; font-family: myFirstFont; color: white; margin-bottom: -5px;">Zulfikar
+              </h1>
+              <p style="text-align: left; margin-bottom: -10px; color: rgb(255, 255, 255);">Arts : 1326</p>
+              <p style="text-align: left; color: rgb(255, 255, 255);">Sports : 00</p>
+            </div>
+
+
+
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="feci-col flick_lum">
+            <div class="sufaid" style="background-color: #5a80c0;box-shadow: 0 0 30px 5px #e4e4e4; padding: 9%;">
+              <h1 class="" style="text-align: left; font-family: myFirstFont; color: white; margin-bottom: -5px;">Gulzar
+              </h1>
+              <p style="text-align: left; margin-bottom: -10px; color: rgb(255, 255, 255);">Arts : 1291</p>
+              <p style="text-align: left; color: rgb(255, 255, 255);">Sports : 00</p>
+            </div>
+
+          </div>
+          <div class="feci-col flick_lum">
+
+
+            <div class="sufaid" style="background-color: #ff0055; box-shadow: 0 0 30px 5px #e4e4e4; padding: 9%;">
+              <h1 class="" style="text-align: left; font-family: myFirstFont; color: white; margin-bottom: -5px;">
+                Shalimar</h1>
+              <p style="text-align: left; margin-bottom: -10px; color: rgb(255, 255, 255);">Arts : 1202</p>
+              <p style="text-align: left; color: rgb(255, 255, 255);">Sports : 00</p>
+            </div>
+          </div>
+          <div class="feci-col flick_lum">
+            <div class="sufaid" style="background-color: #fbad19 ; box-shadow: 0 0 30px 5px #e4e4e4;padding: 9%;">
+              <h1 class="" style="text-align: left; font-family: myFirstFont; color: white; margin-bottom: -5px;">Thalwar
+              </h1>
+              <p style="text-align: left; margin-bottom: -10px; color: rgb(255, 255, 255);">Arts : 1188</p>
+              <p style="text-align: left; color: rgb(255, 255, 255);">Sports : 00</p>
+            </div>
+
+
+<div id="kaviyaranguoola" class="overlay">
+            <div class="popup">
+                <h2>Zafaria 2k24</h2>
+                <a class="close" href="#">×</a>
+                <div class="content">
+                    <img src="/logo.png" style="width: 100px; height: 100px; display:block; margin-left: auto; margin-right: auto; margin-top: 20px;">
+                    <h5 style="text-align: center; margin-bottom: 20px;">Kaviyarangu - Uoola</h5>
+                    <div class="container">
+                        <hr style="background-color: #0e0e0e; height: 1px; border-radius: 20px;">
+                        <div class="row">
+    
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://1st.com" style="width: 100px; height: 100px;">
+                <h3>Farhan KI - Team A</h3>
+                <p>1st With A Grade</p>
+            </div>
+        
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://2nd.com" style="width: 100px; height: 100px;">
+                <h3>Sinan KS - Team B</h3>
+                <p>2nd With A Grade</p>
+            </div>
+        
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://3rd.com" style="width: 100px; height: 100px;">
+                <h3>Nazim CP - Team C</h3>
+                <p>3rd With A Grade</p>
+            </div>
+        
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://1st.com" style="width: 100px; height: 100px;">
+                <h3>Farhan KI - Team A</h3>
+                <p>1st With A Grade</p>
+            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="kaviyaranguoola" class="overlay">
+            <div class="popup">
+                <h2>Zafaria 2k24</h2>
+                <a class="close" href="#">×</a>
+                <div class="content">
+                    <img src="/logo.png" style="width: 100px; height: 100px; display:block; margin-left: auto; margin-right: auto; margin-top: 20px;">
+                    <h5 style="text-align: center; margin-bottom: 20px;">Kaviyarangu - Uoola</h5>
+                    <div class="container">
+                        <hr style="background-color: #0e0e0e; height: 1px; border-radius: 20px;">
+                        <div class="row">
+    
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://1st.com" style="width: 100px; height: 100px;">
+                <h3>Farhan KI - Team A</h3>
+                <p>1st With A Grade</p>
+            </div>
+        
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://2nd.com" style="width: 100px; height: 100px;">
+                <h3>Sinan KS - Team B</h3>
+                <p>2nd With A Grade</p>
+            </div>
+        
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://3rd.com" style="width: 100px; height: 100px;">
+                <h3>Nazim CP - Team C</h3>
+                <p>3rd With A Grade</p>
+            </div>
+        
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://1st.com" style="width: 100px; height: 100px;">
+                <h3>Farhan KI - Team A</h3>
+                <p>1st With A Grade</p>
+            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="kaviyaranguoola" class="overlay">
+            <div class="popup">
+                <h2>Zafaria 2k24</h2>
+                <a class="close" href="#">×</a>
+                <div class="content">
+                    <img src="/logo.png" style="width: 100px; height: 100px; display:block; margin-left: auto; margin-right: auto; margin-top: 20px;">
+                    <h5 style="text-align: center; margin-bottom: 20px;">Kaviyarangu - Uoola</h5>
+                    <div class="container">
+                        <hr style="background-color: #0e0e0e; height: 1px; border-radius: 20px;">
+                        <div class="row">
+    
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://1st.com" style="width: 100px; height: 100px;">
+                <h3>Farhan KI - Team A</h3>
+                <p>1st With A Grade</p>
+            </div>
+        
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://2nd.com" style="width: 100px; height: 100px;">
+                <h3>Sinan KS - Team B</h3>
+                <p>2nd With A Grade</p>
+            </div>
+        
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://3rd.com" style="width: 100px; height: 100px;">
+                <h3>Nazim CP - Team C</h3>
+                <p>3rd With A Grade</p>
+            </div>
+        
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://1st.com" style="width: 100px; height: 100px;">
+                <h3>Farhan KI - Team A</h3>
+                <p>1st With A Grade</p>
+            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+          </div>
+
+
+        </div>
+
+      </section>
+    </div>
+    
+    <!---Result Pop Up-->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--New One-->
+
+
+    <div id="essayarabictanawiyya" class="overlay">
+        <div class="popup">
+            <h2>Zafaria 2k24</h2>
+            <a class="close" href="#">×</a>
+            <div class="content">
+                <img src="/logo.png" style="width: 100px; height: 100px; display:block; margin-left: auto; margin-right: auto; margin-top: 20px;">
+                <h5 style="text-align: center; margin-bottom: 20px;">sdsfg</h5>
+                <div class="container">
+                    <hr style="background-color: #0e0e0e; height: 1px; border-radius: 20px;">
+                    <div class="row">
+
+        <div class="col-sm" style="text-align: center;">
+            <img src="https://1st.com" style="width: 100px; height: 100px;">
+            <h3>asd - Team A</h3>
+            <p>1st With A Grade</p>
+        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<div id="peommlmuoola" class="overlay">
+            <div class="popup">
+                <h2>Zafaria 2k24</h2>
+                <a class="close" href="#">×</a>
+                <div class="content">
+                    <img src="/logo.png" style="width: 100px; height: 100px; display:block; margin-left: auto; margin-right: auto; margin-top: 20px;">
+                    <h5 style="text-align: center; margin-bottom: 20px;">Poem MLM - Uoola</h5>
+                    <div class="container">
+                        <hr style="background-color: #0e0e0e; height: 1px; border-radius: 20px;">
+                        <div class="row">
+    
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://1st.com" style="width: 100px; height: 100px;">
+                <h3>Sinan Ks - Team B</h3>
+                <p>1st With B Grade</p>
+            </div>
+        
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://2nd.com" style="width: 100px; height: 100px;">
+                <h3>Farhan - Team A</h3>
+                <p>2nd With B Grade</p>
+            </div>
+        
+            <div class="col-sm" style="text-align: center;">
+                <img src="https://3rd.com" style="width: 100px; height: 100px;">
+                <h3>Nazim - Team C</h3>
+                <p>3rd With B Grade</p>
+            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      NProgress.configure({ showSpinner: false });
+
+      $(document).ready(function () {
+        $("#loadReuslt").click(function (e) {
+          e.preventDefault(); // Prevent the default behavior of the anchor tag.
+
+          NProgress.start();
+
+          // Create an invisible iframe to load the external website
+          var externalUrl = "https://kullunkala.live/result//"; // Replace with the URL of the external website
+          var iframe = document.createElement("iframe");
+          iframe.style.display = "none";
+          iframe.src = externalUrl;
+          document.body.appendChild(iframe);
+
+          // Wait for the iframe to load completely
+          iframe.onload = function () {
+            NProgress.done();
+            // Redirect to the external website after it's fully loaded
+            window.location.href = externalUrl;
+          };
+        });
+      });
+    </script>
+    <script>
+      NProgress.configure({ showSpinner: false });
+
+      $(document).ready(function () {
+        $("#loadGallery").click(function (e) {
+          e.preventDefault(); // Prevent the default behavior of the anchor tag.
+
+          NProgress.start();
+
+          // Create an invisible iframe to load the external website
+          var externalUrl = "https://kullunkala.live/gallery/"; // Replace with the URL of the external website
+          var iframe = document.createElement("iframe");
+          iframe.style.display = "none";
+          iframe.src = externalUrl;
+          document.body.appendChild(iframe);
+
+          // Wait for the iframe to load completely
+          iframe.onload = function () {
+            NProgress.done();
+            // Redirect to the external website after it's fully loaded
+            window.location.href = externalUrl;
+          };
+        });
+      });
+    </script>
+    <script>
+      NProgress.configure({ showSpinner: false });
+
+      $(document).ready(function () {
+        $("#loadAbout").click(function (e) {
+          e.preventDefault(); // Prevent the default behavior of the anchor tag.
+
+          NProgress.start();
+
+          // Create an invisible iframe to load the external website
+          var externalUrl = "https://kullunkala.live/#about"; // Replace with the URL of the external website
+          var iframe = document.createElement("iframe");
+          iframe.style.display = "none";
+          iframe.src = externalUrl;
+          document.body.appendChild(iframe);
+
+          // Wait for the iframe to load completely
+          iframe.onload = function () {
+            NProgress.done();
+            // Redirect to the external website after it's fully loaded
+            window.location.href = externalUrl;
+          };
+        });
+      });
+    </script>
+    <script>
+      NProgress.configure({ showSpinner: false });
+
+      $(document).ready(function () {
+        $("#loadHome").click(function (e) {
+          e.preventDefault(); // Prevent the default behavior of the anchor tag.
+
+          NProgress.start();
+
+          // Create an invisible iframe to load the external website
+          var externalUrl = "https://kullunkala.live/"; // Replace with the URL of the external website
+          var iframe = document.createElement("iframe");
+          iframe.style.display = "none";
+          iframe.src = externalUrl;
+          document.body.appendChild(iframe);
+
+          // Wait for the iframe to load completely
+          iframe.onload = function () {
+            NProgress.done();
+            // Redirect to the external website after it's fully loaded
+            window.location.href = externalUrl;
+          };
+        });
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/popper.js"></script>
+    <script>
+      function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+          a = li[i].getElementsByTagName("a")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+          } else {
+            li[i].style.display = "none";
+          }
+        }
+      }
+    </script>
+
+</body>
+
+</html>

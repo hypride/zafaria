@@ -1,0 +1,72 @@
+<div id="<|PROGRAM-ID|>" class="overlay">
+      <div class="popup">
+        <h2>Kullun Kala '23</h2>
+        <a class="close" href="#">&times;</a>
+
+
+
+        <div class="content">
+          <img src="https://hypride.github.io/kullun-kala/images/logob.png"
+            style="width: 100px; height: 100px; display:block; margin-left: auto;margin-right: auto; margin-top: 20px;">
+          <h5 style="text-align: center; margin-bottom: 20px;"><|PROGRAM-NAME|></h5>
+          <div class="container">
+            <hr style="background-color: #0e0e0e; height: 1px; border-radius: 20px;">
+            <div class="row">
+
+              <div class="col-sm" style="text-align: center;">
+                <img src="<|POSTION-IMG|>" style="width: 100px; height: 100px;">
+                <h3><|STUDENT-NAME|> - <|TEAM-NAME|></h3>
+                <p><|POSITION|></p>
+              </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+These are the positions
+
+
+
+
+Hey Chat GPT Build A Website that have options for inputs. the inputs replace with specified varibles and store it and once click in download button it will download all together :
+Program Id = <|PROGRAM-ID|>
+Program Name  = <|PROGRAM-NAME|>
+
+The div col-sm is the result code. in there we can see:
+<|POSTION-IMG|>
+<|STUDENT-NAME|>
+<|TEAM-NAME|>
+<|POSITION|>
+
+ask input for postion as dropdown. the positions are:
+1st With A Grade - if this selected place the url "https://1st.com" in <|POSTION-IMG|>
+2nd With A Grade - if this selected place the url "https://2nd.com" in <|POSTION-IMG|>
+3rd With A Grade - if this selected place the url "https://3rd.com" in <|POSTION-IMG|>
+1st With B Grade - if this selected place the url "https://1st.com" in <|POSTION-IMG|>
+2nd With B Grade - if this selected place the url "https://2nd.com" in <|POSTION-IMG|>
+3rd With B Grade - if this selected place the url "https://3rd.com" in <|POSTION-IMG|>
+A Grade - if this selected place the url "https://grade.com" in <|POSTION-IMG|>
+B Grade - if this selected place the url "https://grade.com" in <|POSTION-IMG|>
+
+ask input for student name
+ask input for team name as dropdown
+
+
+
+
+
+
+and the main part is there is many postions for a program. so add option to add multiple results on one program.
+
+
+

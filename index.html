@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Zafaria 2k24 - Celebrating Legacy Dispelling Fallacy</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title"><h2>Zafaria 2k24</h2></div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <a href="/" style="text-align: right; font-size: 15px;" class="mobile">x</a>
+            <ul>
+                <li><a href="#about" class="nobuy">Home</a></li>
+                <li><a href="/result/" class="nobuy">Result</a></li>
+                <li><a href="/checkout.html" class="nobuy">Gallery</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="home">
+        <section>
+            <div class="main-title">
+                <h1>Celebrating Legacy</h1>
+                <h1>Dispelling Fallacy</h1>
+                <p>"Zafaria 2k24" is the name of this year's Rabee' festival, organized by the Darunnajath Islamic Complex and Iqra' Mates. In a rapidly evolving contemporary context rife with falsehoods and fake news, Zafaria 2k24 aims to uncover and present the truth and facts about Mugals. </p>
+                <a href="#about">Explore More</a>
+            </div>
+        </section>
+    </div>
+    <div class="more" id="about">
+        <div class="section">
+            <div class="col1">
+                <div class="logoc">
+                    <img src="logo.png" alt="">
+                </div>
+            </div>
+            <div class="col2">
+                <h1>What is Zafaria 2k24?</h1>
+                <p>"Zafaria 2k24" is the name of this year's Rabee' festival, organized by the Darunnajath Islamic Complex and Iqra' Mates. In a rapidly evolving contemporary context rife with falsehoods and fake news, Zafaria 2k24 aims to uncover and present the truth and facts about Mugals. Zafaria 2k24 Arts Fest will play a pivotal role in enhancing the academic progress of students across various fields of study and academic activities.</p>
+                <p class="extra">Zafar which means “victory” in Arabic and Persian. This name carries historical significance, particularly through Bahadur Shah Zafar, the last Mughal emperor, who symbolizes the end of an era but also reflects the grandeur and cultural depth of the Mughal dynasty. 
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="score">
+        <div class="section">
+            <div class="title">
+                <h2 style="text-align: center;">Grand Total</h2>
+            </div>
+            <div class="cols">
+                <div class="col1">
+                    <div class="team">
+                        <img src="img/gulzar.png">
+                        <div class="down">
+                            Point : 0000
+                        </div>
+                    </div>
+                    <div class="team">
+                        <img src="img/shalimar.png">
+                        <div class="down" style="background-color: #7d9d30;">
+                            Point : 0000
+                        </div>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="team"> 
+                        <img src="img/thalwar.png">
+                        <div class="down" style="background-color: #c8a837;">
+                            Point : 0000
+                        </div>
+                    </div>
+                    <div class="team">
+                        <img src="img/zulfikar.png">
+                        <div class="down" style="background-color: #c8a837">
+                            Point : 0000
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="slideshow">
+        <div class="sectionx">
+            <img src="img/gu.jpg">
+        </div>
+        <div class="sectionx">
+            <img src="img/sha.jpg">
+        </div>
+        <div class="sectionx">
+            <img src="img/tha.jpg">
+        </div>
+        <div class="sectionx">
+            <img src="img/zul.jpg">
+        </div>
+    </div>
+    <div class="result">
+        <div class="section">
+            <div class="btn" onclick="mResult">
+                <a href="/result/" style="color: white; text-decoration: none;"><h2>View Results</h2></a>
+            </div>
+            <div class="btn">
+                <a href="/gallery/" style="color: white; text-decoration: none;"><h2>View Gallery</h2></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="section">
+            <h1>Zafaria 2k24</h1>
+            <h3>Celebrating Legacy Dispelling Fallacy</h3>
+            <p>"Zafaria 2k24" is the name of this year's Rabee' festival, organized by the Darunnajath Islamic Complex and Iqra' Mates. In a rapidly evolving contemporary context rife with falsehoods and fake news, Zafaria 2k24 aims to uncover and present the truth and facts about Mugals. Zafaria 2k24 Arts Fest will play a pivotal role in enhancing the academic progress of students across various fields of study and academic activities.</p>
+            <p>Powered By <b>Iqra' Mates</b></p>
+            <p style="margin-top: 0px;">Developed By Nazim Cp</p>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+<script>
+    function mResult(){
+        window.location.href = "/result/";
+    }
+</script>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        const slides = document.getElementsByClassName("sectionx");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1; }    
+        slides[slideIndex - 1].style.display = "block";  
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+</script>
+</html>
